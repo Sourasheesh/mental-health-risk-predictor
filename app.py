@@ -68,6 +68,11 @@ def main_page():
         "If you have a mental health issue, does it interfere with work?",
         ["Never", "Rarely", "Sometimes", "Often", "Unknown"]
     )
+    ques1 = st.selectbox("Have you been finding it harder to focus on tasks or remember details recently?",["Yes","No"])
+    ques2 = st.selectbox("In the past two weeks, have you felt unusually sad, low, or hopeless for several days?", ["Yes","No"])
+    ques3 = st.selectbox("Do you find less enjoyment in projects or activities you used to find interesting?", ["Yes","No"])
+    ques4 = st.selectbox("Have you noticed a drop in motivation to learn or improve skills?", ["Yes", "No"]
+)
 
     input_data = pd.DataFrame([[age, gender, family_history, work_interfere]],
                               columns=["Age", "Gender", "family_history", "work_interfere"])
